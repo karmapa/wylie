@@ -1,7 +1,9 @@
 div {
   padding-top: 16px;
 }
-
+textarea {
+  font-size: 32px;
+}
 .input {
   resize: none;
   width: 49%;
