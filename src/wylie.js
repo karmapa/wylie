@@ -1874,5 +1874,3 @@ if (typeof (module) !== 'undefined') {
 		getopt: function() { return opt }
 	};
 }
-
-
