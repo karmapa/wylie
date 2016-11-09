@@ -1868,10 +1868,10 @@ if (typeof (module) !== 'undefined') {
 } else {
 	window.wylie = {
 		fromWylie: fromWylie,
-			fromWylieWithWildcard: fromWylieWithWildcard,
-			toWylie: toWylie,
-			setopt: setopt,
-			getopt: function() { return opt }
+		fromWylieWithWildcard: fromWylieWithWildcard,
+		toWylie: toWylie,
+		setopt: setopt,
+		getopt: function() { return opt }
 	};
 }
 
