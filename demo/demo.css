@@ -1,0 +1,15 @@
+div {
+  padding-top: 16px;
+}
+
+.input {
+  resize: none;
+  width: 49%;
+  height: 200px;
+}
+
+.output {
+  resize: none;
+  width: 49%;
+  height: 200px;
+}
