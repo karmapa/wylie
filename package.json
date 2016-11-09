@@ -1,0 +1,22 @@
+{
+  "name": "wylie",
+  "version": "0.0.1",
+  "description": "wylie",
+  "main": "wylie.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/karmapa/wylie.git"
+  },
+  "keywords": [
+    "wylie"
+  ],
+  "author": "karmapa",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/karmapa/wylie/issues"
+  },
+  "homepage": "https://github.com/karmapa/wylie#readme"
+}
