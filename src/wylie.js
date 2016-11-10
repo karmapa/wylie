@@ -221,11 +221,15 @@ m_other.put("<", 	"\u0f3a");
 m_other.put(">", 	"\u0f3b");
 m_other.put("(", 	"\u0f3c");
 m_other.put(")", 	"\u0f3d");
+m_other.put("oṃ", "\u0f00");
+m_other.put("ȳ", "\u0f01");
+m_other.put("uṃ", "\u0f02");
+m_other.put("uɱ", "\u0f03");
 m_other.put("༄", 	"\u0f04");
-m_other.put("༅", 	"\u0f05");
+m_other.put("༅", "\u0f05");
 m_other.put("༆", 	"\u0f06");
-m_other.put("༇", 	"\u0f07");
-m_other.put("༉", 	"\u0f09");
+m_other.put("༇", "\u0f07");
+m_other.put("༉", "\u0f09");
 
 // special characters: flag those if they occur out of context
 var m_special = new newHashSet();
@@ -702,6 +706,10 @@ m_tib_caret.put("b", 	"v");
 // other stand-alone characters
 var m_tib_other = new newHashMap();
 m_tib_other.put(' ', 		"_");
+m_tib_other.put("\u0f00", 	"oṃ");
+m_tib_other.put("\u0f01", 	"ȳ");
+m_tib_other.put("\u0f02", 	"uṃ");
+m_tib_other.put("\u0f03", 	"uɱ");
 m_tib_other.put('\u0f04', 	"༄");
 m_tib_other.put('\u0f05', 	"༅");
 m_tib_other.put('\u0f06', 	"༆");
@@ -850,7 +858,9 @@ m_tokens_start.put('t', 3);
 m_tokens_start.put('s', 2);
 m_tokens_start.put('c', 2);
 m_tokens_start.put('n', 2);
+m_tokens_start.put('o', 2);
 m_tokens_start.put('p', 2);
+m_tokens_start.put('u', 2);
 m_tokens_start.put('\r', 2);
 
 // also for tokenization - a set of tokens longer than one letter
@@ -886,10 +896,13 @@ m_tokens.add("gh");
 m_tokens.add("kh");
 m_tokens.add("ng");
 m_tokens.add("ny");
+m_tokens.add("oṃ");
 m_tokens.add("ph");
 m_tokens.add("sh");
 m_tokens.add("th");
 m_tokens.add("ts");
+m_tokens.add("uɱ");
+m_tokens.add("uṃ");
 m_tokens.add("zh");
 m_tokens.add("~M");
 m_tokens.add("~X");
