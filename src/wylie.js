@@ -182,7 +182,7 @@ m_final_uni.put('~M', 	'\u0f83');
 m_final_uni.put('X', 	'\u0f37');
 m_final_uni.put('~X', 	'\u0f35');
 m_final_uni.put('H', 	'\u0f7f');
-m_final_uni.put('?', 	'\u0f84');
+m_final_uni.put('྄', 	'\u0f84');
 m_final_uni.put('^', 	'\u0f39');
 
 // final symbols organized by class
@@ -680,7 +680,7 @@ m_tib_final_wylie.put('\u0f37', 	'X');
 m_tib_final_wylie.put('\u0f35', 	'~X');
 m_tib_final_wylie.put('\u0f39', 	'^');
 m_tib_final_wylie.put('\u0f7f', 	'H');
-m_tib_final_wylie.put('\u0f84', 	'?');
+m_tib_final_wylie.put('\u0f84', 	'྄');
 
 // final symbols by class
 var m_tib_final_class = new newHashMap();
@@ -691,7 +691,7 @@ m_tib_final_class.put('\u0f37', 	'X');
 m_tib_final_class.put('\u0f35', 	'X');
 m_tib_final_class.put('\u0f39', 	'^');
 m_tib_final_class.put('\u0f7f', 	'H');
-m_tib_final_class.put('\u0f84', 	'?');
+m_tib_final_class.put('\u0f84', 	'྄');
 
 // special characters introduced by ^
 var m_tib_caret = new newHashMap();
