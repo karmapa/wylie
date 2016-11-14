@@ -225,6 +225,7 @@ m_other.put('oṃ', '\u0f00');
 m_other.put('ȳ', '\u0f01');
 m_other.put('uṃ', '\u0f02');
 m_other.put('uɱ', '\u0f03');
+m_other.put('`', '\u0f85');
 
 // special characters: flag those if they occur out of context
 var m_special = new newHashSet();
@@ -727,6 +728,7 @@ m_tib_other.put('\u0f3c', 	'{');
 m_tib_other.put('\u0f3d', 	'}');
 m_tib_other.put('\u0f3e', 	'(');
 m_tib_other.put('\u0f3f', 	')');
+m_tib_other.put('\u0f85', 	'`');
 
 // all these stacked consonant combinations don't need "+"s in them
 var m_tib_stacks = new newHashSet();
