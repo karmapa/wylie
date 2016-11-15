@@ -164,9 +164,9 @@ var m_vowel = new newHashMap();
 m_vowel.put('a', 	'\u0f68');
 m_vowel.put('A', 	'\u0f71');
 m_vowel.put('i', 	'\u0f72');
-m_vowel.put('I', 	'\u0f71\u0f72');
+m_vowel.put('ī', 	'\u0f71\u0f72');
 m_vowel.put('u', 	'\u0f74');
-m_vowel.put('U', 	'\u0f71\u0f74');
+m_vowel.put('ū', 	'\u0f71\u0f74');
 m_vowel.put('e', 	'\u0f7a');
 m_vowel.put('ai', 	'\u0f7b');
 m_vowel.put('o', 	'\u0f7c');
@@ -658,9 +658,9 @@ m_tib_subjoined.put('\u0fbc', 	'R');
 var m_tib_vowel = new newHashMap();
 m_tib_vowel.put('\u0f71', 	'A');
 m_tib_vowel.put('\u0f72', 	'i');
-m_tib_vowel.put('\u0f73', 	'I');
+m_tib_vowel.put('\u0f73', 	'ī');
 m_tib_vowel.put('\u0f74', 	'u');
-m_tib_vowel.put('\u0f75', 	'U');
+m_tib_vowel.put('\u0f75', 	'ū');
 m_tib_vowel.put('\u0f7a', 	'e');
 m_tib_vowel.put('\u0f7b', 	'ai');
 m_tib_vowel.put('\u0f7c', 	'o');
@@ -669,8 +669,8 @@ m_tib_vowel.put('\u0f80', 	'-i');
 
 // long (Skt) vowels
 var m_tib_vowel_long = new newHashMap();
-m_tib_vowel_long.put('i', 	'I');
-m_tib_vowel_long.put('u', 	'U');
+m_tib_vowel_long.put('i', 	'ī');
+m_tib_vowel_long.put('u', 	'ū');
 m_tib_vowel_long.put('-i', 	'-I');
 
 // final symbols => wylie
