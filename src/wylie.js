@@ -1169,7 +1169,7 @@ function unicodeEscape (warns, line, t) { // [], int, str
     return null;
   }
   if (!validHex(hex)) {
-    warnl(warns, line, "\"" + t + "\": invalid hex code.");
+    warnl(warns, line, '\"' + t + '\": invalid hex code.');
     return '';
   }
   return String.fromCharCode(parseInt(hex, 16));
@@ -1245,10 +1245,10 @@ function fromWylieOneTsekbar(tokens, i) { // (str, int)
         }
         if (next != null && !prefix(stack.single_consonant, next)) {
           next = next.replace(/\+/g, '');
-          warns.push("Prefix \"" + stack.single_consonant + "\" does not occur before \"" + next + "\".");
+          warns.push('Prefix \"' + stack.single_consonant + '\" does not occur before \"' + next + '\".');
         }
       } else {
-        warns.push("Invalid prefix consonant: \"" + stack.single_consonant + "\".");
+        warns.push('Invalid prefix consonant: \"' + stack.single_consonant + '\".');
       }
     state = State.MAIN;
     // - main stack with vowel or multiple consonants
@@ -1263,14 +1263,14 @@ function fromWylieOneTsekbar(tokens, i) { // (str, int)
       }
     // - unexpected single consonant after prefix
     } else if (state == State.MAIN) {
-      warns.push("Expected vowel after \"" + stack.single_consonant + "\".");
+      warns.push('Expected vowel after \"' + stack.single_consonant + '\".');
       // - 1st suffix
     } else if (state == State.SUFF1) {
       consonants.push(stack.single_consonant);
       // check this one only in strict mode b/c it trips on lots of Skt stuff
       if (opt.check_strict) {
         if (!isSuffix(stack.single_consonant)) {
-          warns.push("Invalid suffix consonant: \"" + stack.single_consonant + "\".");
+          warns.push('Invalid suffix consonant: \"' + stack.single_consonant + '\".');
         }
       }
       state = State.SUFF2;
@@ -1279,21 +1279,21 @@ function fromWylieOneTsekbar(tokens, i) { // (str, int)
       consonants.push(stack.single_consonant);
       if (isSuff2(stack.single_consonant)) {
         if (!suff2(stack.single_consonant, prev_cons)) {
-          warns.push("Second suffix \"" + stack.single_consonant
-          + "\" does not occur after \"" + prev_cons + "\".");
+          warns.push('Second suffix \"' + stack.single_consonant
+          + '\" does not occur after \"' + prev_cons + '\".');
         }
       } else {
-        warns.push("Invalid 2nd suffix consonant: \"" + stack.single_consonant  + "\".");
+        warns.push('Invalid 2nd suffix consonant: \"' + stack.single_consonant  + '\".');
       }
       state = State.NONE;
       // - more crap after a 2nd suffix
     } else if (state == State.NONE) {
-      warns.push("Cannot have another consonant \"" + stack.single_consonant + "\" after 2nd suffix.");
+      warns.push('Cannot have another consonant \"' + stack.single_consonant + '\" after 2nd suffix.');
     }
   }
 
   if (state == State.MAIN && stack.single_consonant != null && isPrefix(stack.single_consonant)) {
-    warns.push("Vowel expected after \"" + stack.single_consonant + "\".");
+    warns.push('Vowel expected after \"' + stack.single_consonant + '\".');
   }
 
   // check root consonant placement only if there were no warnings so far, and the syllable
@@ -1304,7 +1304,7 @@ function fromWylieOneTsekbar(tokens, i) { // (str, int)
     if (2 == consonants.length && root_idx != 0
     && prefix(consonants[0], consonants[1]) && isSuffix(consonants[1]))
     {
-      warns.push("Syllable should probably be \"" + consonants[0] + "a" + consonants[1] + "\".");
+      warns.push('Syllable should probably be \"' + consonants[0] + 'a' + consonants[1] + '\".');
 
       // 3 letters where 1st can be prefix, 2nd can be postfix before "s" and last is "s":
       // use a lookup table as this is completely ambiguous.
@@ -1317,7 +1317,7 @@ function fromWylieOneTsekbar(tokens, i) { // (str, int)
       var expect_key = ambiguous_key(cc);
   //    console.log('typeof expect_key', typeof expect_key)
       if (expect_key != null && expect_key != root_idx) {
-        warns.push("Syllable should probably be \"" + ambiguous_wylie(cc) + "\".");
+        warns.push('Syllable should probably be \"' + ambiguous_wylie(cc) + '\".');
       }
     }
   }
@@ -1356,7 +1356,7 @@ function fromWylieOneStack(tokens, i) {
       var next = consonantString(tokens, i + 1);
       if (!superscript(t, next)) {
         next = next.replace(/\+/g, '');
-        warns.push("Superscript \"" + t + "\" does not occur above combination \"" + next + "\".");
+        warns.push('Superscript \"' + t + '\" does not occur above combination \"' + next + '\".');
       }
     }
     out += consonant(t);
@@ -1404,13 +1404,13 @@ function fromWylieOneStack(tokens, i) {
           if (opt.check_strict && !plus) {
             var prev = consonantStringBackwards(tokens, i-1, orig_i);
             if (!subscript(t2, prev)) {
-              prev = prev.replace(/\+/g, "");
-              warns.push("Subjoined \"" + t2 + "\" not expected after \"" + prev + "\".");
+              prev = prev.replace(/\+/g, '');
+              warns.push('Subjoined \"' + t2 + '\" not expected after \"' + prev + '\".');
             }
             // simple check only
           } else if (opt.check) {
             if (!subscript(t2, t) && !(1 == z && 'w' == t2 && 'y' == t)) {
-              warns.push("Subjoined \"" + t2 + "\"not expected after \"" + t + "\".");
+              warns.push('Subjoined \"' + t2 + '\"not expected after \"' + t + '\".');
             }
           }
           out += subjoined(t2);
@@ -1429,7 +1429,7 @@ function fromWylieOneStack(tokens, i) {
     // or at the very end of the stack if that's how it was in the Wylie.
     if (caret > 0) {
       if (caret > 1) {
-        warns.push("Cannot have more than one \"^\" applied to the same stack.");
+        warns.push('Cannot have more than one \"^\" applied to the same stack.');
       }
       final_found.put(final_class('^'), '^');
       out += (final_uni('^'));
@@ -1459,7 +1459,7 @@ function fromWylieOneStack(tokens, i) {
       t = tokens[i];
       if (null == t || (null == vowel(t) && null == subjoined(t))) {
         if (opt.check) {
-          warns.push("Expected vowel or consonant after \"+\".");
+          warns.push('Expected vowel or consonant after \"+\".');
         }
         break MAIN;
       }
@@ -1483,10 +1483,10 @@ function fromWylieOneStack(tokens, i) {
     // check for duplicates
     if (final_found.containsKey(klass)) {
       if (t == final_found.get(klass)) {
-        warns.push("Cannot have two \"" + t + "\" applied to the same stack.");
+        warns.push('Cannot have two \"' + t + '\" applied to the same stack.');
       } else {
-        warns.push("Cannot have \"" + t + "\" and \"" + final_found.get(klass)
-          + "\" applied to the same stack.");
+        warns.push('Cannot have \"' + t + '\" and \"' + final_found.get(klass)
+          + '\" applied to the same stack.');
       }
     } else {
       final_found.put(klass, t);
@@ -1610,7 +1610,7 @@ function fromWylie(str, warns) {
         i += tb.tokens_used;
         units++;
         for (var w = 0; w < tb.warns.length; w++) {
-          warnl(warns, line, "\"" + word + "\": " + tb.warns[w]);
+          warnl(warns, line, '\"' + word + '\": ' + tb.warns[w]);
         }
         continue ITER;
       }
@@ -1651,7 +1651,7 @@ function fromWylie(str, warns) {
       // stuff that shouldn't occur out of context: special chars and remaining [a-zA-Z]
       var c = t.charAt(0);
       if (isSpecial(t) || (c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z')) {
-        warnl(warns, line, "Unexpected character \"" + t + "\".");
+        warnl(warns, line, 'Unexpected character \"' + t + '\".');
       }
       // anything else: pass through
       out += t;
@@ -1767,7 +1767,7 @@ function toWylieOneTsekbar(str, len, i) {
     var ztr = strb.join('');
     var root = ambiguous_key(ztr);
     if (null == root) {
-      warns.push("Ambiguous syllable found: root consonant not known for \"" + ztr + "\".");
+      warns.push('Ambiguous syllable found: root consonant not known for \"' + ztr + '\".');
       // make it up...  (ex. "mgas" for ma, ga, sa)
       root = 1;
     }
@@ -1817,9 +1817,9 @@ function toWylieOneStack(str, len, i) {
       st.stack.push(o);
       // check for bad ordering
       if (st.finals.length > 0) {
-        st.warns.push("Subjoined sign \"" + o + "\" found after final sign \"" + ffinal + "\".");
+        st.warns.push('Subjoined sign \"' + o + '\" found after final sign \"' + ffinal + '\".');
       } else if (st.vowels.length > 0) {
-        st.warns.push("Subjoined sign \"" + o + "\" found after vowel sign \"" + vowel + "\".");
+        st.warns.push('Subjoined sign \"' + o + '\" found after vowel sign \"' + vowel + '\".');
       }
     } else if ((o = tib_vowel(t)) != null) {
       i++;
@@ -1829,7 +1829,7 @@ function toWylieOneStack(str, len, i) {
       }
       // check for bad ordering
       if (st.finals.length > 0) {
-        st.warns.push("Vowel sign \"" + o + "\" found after final sign \"" + ffinal + "\".");
+        st.warns.push('Vowel sign \"' + o + '\" found after final sign \"' + ffinal + '\".');
       }
     } else if ((o = tib_final_wylie(t)) != null) {
       i++;
@@ -1846,8 +1846,8 @@ function toWylieOneStack(str, len, i) {
         }
         // check for invalid combinations
         if (st.finals_found.containsKey(klass)) {
-          st.warns.push("Final sign \"" + o
-          + "\" should not combine with found after final sign \"" + ffinal + "\".");
+          st.warns.push('Final sign \"' + o
+          + '\" should not combine with found after final sign \"' + ffinal + '\".');
         } else {
           st.finals_found.put(klass, o);
         }
