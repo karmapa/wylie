@@ -225,6 +225,7 @@ m_other.put('oṃ', '\u0f00');
 m_other.put('ȳ', '\u0f01');
 m_other.put('uṃ', '\u0f02');
 m_other.put('uɱ', '\u0f03');
+m_other.put('ḵa', '\u0f6b');
 m_other.put('`', '\u0f85');
 
 // special characters: flag those if they occur out of context
@@ -728,6 +729,7 @@ m_tib_other.put('\u0f3c', 	'{');
 m_tib_other.put('\u0f3d', 	'}');
 m_tib_other.put('\u0f3e', 	'(');
 m_tib_other.put('\u0f3f', 	')');
+m_tib_other.put('\u0f6b', 	'ḵa');
 m_tib_other.put('\u0f85', 	'`');
 
 // all these stacked consonant combinations don't need "+"s in them
@@ -845,6 +847,7 @@ m_tokens_start.put('-', 4);
 m_tokens_start.put('ṭ', 2);
 m_tokens_start.put('a', 2);
 m_tokens_start.put('k', 3);
+m_tokens_start.put('ḵ', 2);
 m_tokens_start.put('t', 3);
 m_tokens_start.put('s', 2);
 m_tokens_start.put('c', 2);
@@ -866,6 +869,7 @@ m_tokens.add('bh');
 m_tokens.add('dh');
 m_tokens.add('dzh');
 m_tokens.add('gh');
+m_tokens.add('ḵa');
 m_tokens.add('kṣa');
 m_tokens.add('kṣh');
 m_tokens.add('tsh');
