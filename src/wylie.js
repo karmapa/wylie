@@ -1279,7 +1279,7 @@ function fromWylieOneTsekbar(tokens, i) { // (str, int)
       consonants.push(stack.single_consonant);
       if (isSuff2(stack.single_consonant)) {
         if (!suff2(stack.single_consonant, prev_cons)) {
-          warns.push("Second suffix \"" + stack.single_consonant 
+          warns.push("Second suffix \"" + stack.single_consonant
           + "\" does not occur after \"" + prev_cons + "\".");
         }
       } else {
@@ -1301,7 +1301,7 @@ function fromWylieOneTsekbar(tokens, i) { // (str, int)
   // already takes care of most illegal combinations.
   if (opt.check && warns.length == 0 && check_root && root_idx >= 0) {
     // 2 letters where each could be prefix/suffix: root is 1st
-    if (consonants.length == 2 && root_idx != 0 
+    if (consonants.length == 2 && root_idx != 0
     && prefix(consonants[0], consonants[1]) && isSuffix(consonants[1]))
     {
       warns.push("Syllable should probably be \"" + consonants[0] + "a" + consonants[1] + "\".");
@@ -1743,11 +1743,11 @@ function toWylieOneTsekbar(str, len, i) {
       stacks[0].prefix = true;
     }
   }
-  if (stacks.length > 1 && stacks[last].single_cons != null 
+  if (stacks.length > 1 && stacks[last].single_cons != null
   && isSuffix(stacks[last].single_cons)) {
     stacks[last].suffix = true;
   }
-  if (stacks.length > 2 && stacks[last].single_cons != null 
+  if (stacks.length > 2 && stacks[last].single_cons != null
   && stacks[last - 1].single_cons != null
   && isSuffix(stacks[last - 1].single_cons)
   && suff2(stacks[last].single_cons, stacks[last - 1].single_cons)) {
@@ -1846,7 +1846,7 @@ function toWylieOneStack(str, len, i) {
         }
         // check for invalid combinations
         if (st.finals_found.containsKey(klass)) {
-          st.warns.push("Final sign \"" + o 
+          st.warns.push("Final sign \"" + o
           + "\" should not combine with found after final sign \"" + ffinal + "\".");
         } else {
           st.finals_found.put(klass, o);
@@ -1878,7 +1878,7 @@ function toWylieOneStack(str, len, i) {
   }
   st.cons_str = st.stack.join('+');
   // if this is a single consonant, keep track of it (useful for prefix/suffix analysis)
-  if (st.stack.length == 1 && st.stack[0] != ('a') && !st.caret 
+  if (st.stack.length == 1 && st.stack[0] != ('a') && !st.caret
   && st.vowels.length == 0 && st.finals.length == 0) {
     st.single_cons = st.cons_str;
   }
@@ -2048,7 +2048,7 @@ if (typeof (module) !== 'undefined') {
     fromWylieWithWildcard: fromWylieWithWildcard,
     toWylie: toWylie,
     setopt: setopt,
-    getopt: function() { 
+    getopt: function() {
       return opt;
     }
   };
