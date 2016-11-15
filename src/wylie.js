@@ -1402,7 +1402,7 @@ function fromWylieOneStack(tokens, i) {
           }
           // full stack checking (disabled by "+")
           if (opt.check_strict && !plus) {
-            var prev = consonantStringBackwards(tokens, i-1, orig_i);
+            var prev = consonantStringBackwards(tokens, i - 1, orig_i);
             if (!subscript(t2, prev)) {
               prev = prev.replace(/\+/g, '');
               warns.push('Subjoined \"' + t2 + '\" not expected after \"' + prev + '\".');
@@ -1604,7 +1604,7 @@ function fromWylie(str, warns) {
         var tb = fromWylieOneTsekbar(tokens, i);
         var word = '';
         for (var j = 0; j < tb.tokens_used; j++) {
-          word += (tokens[i+j]);
+          word += (tokens[i + j]);
         }
         out += tb.uni_string;
         i += tb.tokens_used;
@@ -2030,14 +2030,14 @@ function toWylie(str, warns, escape) {
   }
   return out;
 }
-var fromWylieWithWildcard=function(wy) {
-  wy=wy.replace(/\./g,'．');
-  wy=wy.replace(/\*/g,'※');
-  var r=fromWylie(wy);
-  r=r.replace(/※/g,'*');
-  r=r.replace(/．/g,'?');
-  r=r.replace(/([\*\?])([༠༡༢༣༤༥༦༧༨༩])/g,function(m,m1,m2){
-    return m1+String.fromCharCode(m2.charCodeAt(0)-0x0EF0);
+var fromWylieWithWildcard = function(wy) {
+  wy = wy.replace(/\./g,'．');
+  wy = wy.replace(/\*/g,'※');
+  var r = fromWylie(wy);
+  r = r.replace(/※/g,'*');
+  r = r.replace(/．/g,'?');
+  r = r.replace(/([\*\?])([༠༡༢༣༤༥༦༧༨༩])/g, function(m, m1, m2) {
+    return m1 + String.fromCharCode(m2.charCodeAt(0) - 0x0EF0);
   });
   return r;
 };
