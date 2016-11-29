@@ -715,7 +715,7 @@ m_tib_other.put('\u0f01', 'ȳ');
 m_tib_other.put('\u0f02', 'uṃ');
 m_tib_other.put('\u0f03', 'uɱ');
 m_tib_other.put('\u0f0b', ' ');
-m_tib_other.put('\u0f0c', '*');
+m_tib_other.put('\u0f0c', ' ');
 m_tib_other.put('\u0f0d', '/');
 m_tib_other.put('\u0f0e', '//');
 m_tib_other.put('\u0f0f', '¦');
