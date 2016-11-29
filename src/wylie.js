@@ -2025,7 +2025,7 @@ function toWylie(str, warns, escape) {
     }
      out += ']';
   }
-  return out;
+  return out.replace(/\+/g, '');
 }
 var fromWylieWithWildcard = function(wy) {
   wy = wy.replace(/\./g,'．');
