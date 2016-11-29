@@ -167,9 +167,9 @@ m_subjoined.put('-ṣ', '\u0fb5');
 m_subjoined.put('s', '\u0fb6');
 m_subjoined.put('h', '\u0fb7');
 m_subjoined.put('a', '\u0fb8');
-m_subjoined.put('W', '\u0fba');
-m_subjoined.put('Y', '\u0fbb');
-m_subjoined.put('R', '\u0fbc');
+m_subjoined.put('w', '\u0fba');
+m_subjoined.put('y', '\u0fbb');
+m_subjoined.put('r', '\u0fbc');
 
 // vowels
 var m_vowel = new newHashMap();
@@ -657,9 +657,9 @@ m_tib_subjoined.put('\u0fb6', 's');
 m_tib_subjoined.put('\u0fb7', 'h');
 m_tib_subjoined.put('\u0fb8', 'a');
 m_tib_subjoined.put('\u0fb9', 'ksh');
-m_tib_subjoined.put('\u0fba', 'W');
-m_tib_subjoined.put('\u0fbb', 'Y');
-m_tib_subjoined.put('\u0fbc', 'R');
+m_tib_subjoined.put('\u0fba', 'w');
+m_tib_subjoined.put('\u0fbb', 'y');
+m_tib_subjoined.put('\u0fbc', 'r');
 
 // vowel signs:
 // a-chen is not here because that's a top character, not a vowel sign.
