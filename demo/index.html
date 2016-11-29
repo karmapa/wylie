@@ -2,20 +2,21 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>wylie-demo</title>
+    <title>wylie demo</title>
     <script src="../src/wylie.js"></script>
     <link rel="stylesheet" href="./demo.css">
   </head>
   <body>
     <div>
-      <textarea id="toWylieInput" class="input">༄༅༅། །རྒྱ་གར་སྐད་དུ། བི་ན་ཡ་བསྟུ།</textarea>
-      <textarea readonly id="toWylieOutput" class="output"></textarea>
-      <button id="toWylie">to wylie</button>
+      <textarea id="textInput" class="input">༄༅༅། །རྒྱ་གར་སྐད་དུ། བི་ན་ཡ་བསྟུ།</textarea>
     </div>
+    <select id="wylieSelect">
+      <option value="1" selected="true">to Wylie</option>
+      <option value="2">from Wylie</option>
+    </select>
+    <button id="convert">convert</button>
     <div>
-      <textarea id="fromWylieInput"  class="input">@##/_/rgya gar skad du/_bi na ya bstu/</textarea>
-      <textarea readonly id="fromWylieOutput" class="output"></textarea>
-      <button id="fromWylie">from wylie</button>
+      <textarea readonly id="textOutput" class="output"></textarea>
     </div>
   </body>
   <script src="./index.js"></script>

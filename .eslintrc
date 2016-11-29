@@ -36,13 +36,13 @@
     "curly": 1,                      // specify curly brace conventions for all control statements
     "default-case": 0,               // require default case in switch statements (off by default)
     "dot-notation": 1,               // encourages use of dot notation whenever possible
-    "eqeqeq": 1,                     // require the use of === and !==
+    "eqeqeq": 0,                     // require the use of === and !==
     "guard-for-in": 0,               // make sure for-in loops have an if statement (off by default)
     "no-alert": 1,                   // disallow the use of alert, confirm, and prompt
     "no-caller": 1,                  // disallow use of arguments.caller or arguments.callee
     "no-div-regex": 1,               // disallow division operators explicitly at beginning of regular expression (off by default)
     "no-else-return": 0,             // disallow else after a return in an if (off by default)
-    "no-labels": 1,                  // disallow use of labels for anything other then loops and switches
+    "no-labels": 0,                  // disallow use of labels for anything other then loops and switches
     "no-eq-null": 0,                 // disallow comparisons to null without a type-checking operator (off by default)
     "no-eval": 1,                    // disallow use of eval()
     "no-extend-native": 1,           // disallow adding to native types
@@ -89,10 +89,9 @@
     "no-label-var": 1,               // disallow labels that share a name with a variable
     "no-shadow": 0,                  // disallow declaration of variables already declared in the outer scope
     "no-shadow-restricted-names": 1, // disallow shadowing of names such as arguments
-    "no-undef": 2,                   // disallow use of undeclared variables unless mentioned in a /*global */ block
     "no-undefined": 0,               // disallow use of undefined variable (off by default)
     "no-undef-init": 1,              // disallow use of undefined when initializing variables
-    "no-unused-vars": [1, {"vars": "all", "args": "none"}], // disallow declaration of variables that are not used in the code
+    "no-unused-vars": [0, {"vars": "all", "args": "none"}], // disallow declaration of variables that are not used in the code
     "no-use-before-define": 0,       // disallow use of variables before they are defined
 
     // Node.js

@@ -1,15 +1,15 @@
-document.getElementById('toWylie').addEventListener('click', toWylie);
+document.getElementById('convert').addEventListener('click', wylieConvert);
 
-function toWylie() {
-  var text = document.getElementById('toWylieInput').value;
-  var result = wylie.toWylie(text);
-  document.getElementById('toWylieOutput').value = result;
-}
-
-document.getElementById('fromWylie').addEventListener('click', fromWylie);
-
-function fromWylie() {
-  var text = document.getElementById('fromWylieInput').value;
-  var result = wylie.fromWylie(text);
-  document.getElementById('fromWylieOutput').value = result;
+function wylieConvert() {
+  var e = document.getElementById('wylieSelect');
+  selector = e.options[e.selectedIndex].value;
+  var text = document.getElementById('textInput').value;
+  if('1' === selector) {
+    var result = wylie.toWylie(text);
+  } else if('2' === selector) {
+    var result = wylie.fromWylie(text);
+  } else {
+    return;
+  }
+  document.getElementById('textOutput').value = result;
 }
