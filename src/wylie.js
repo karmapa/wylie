@@ -193,7 +193,7 @@ m_final_uni.put('~M`', '\u0f82');
 m_final_uni.put('~M', '\u0f83');
 m_final_uni.put('H', '\u0f7f');
 m_final_uni.put('྄', '\u0f84');
-m_final_uni.put('^', '\u0f39');
+m_final_uni.put('༹', '\u0f39');
 
 // final symbols organized by class
 var m_final_class = new newHashMap();
@@ -689,7 +689,7 @@ var m_tib_final_wylie = new newHashMap();
 m_tib_final_wylie.put('\u0f7e', 'ṃ');
 m_tib_final_wylie.put('\u0f82', 'ṁ');
 m_tib_final_wylie.put('\u0f83', 'ḿ');
-m_tib_final_wylie.put('\u0f39', '^');
+m_tib_final_wylie.put('\u0f39', '༹');
 m_tib_final_wylie.put('\u0f7f', 'ḥ');
 m_tib_final_wylie.put('\u0f84', '྄');
 
@@ -698,7 +698,7 @@ var m_tib_final_class = new newHashMap();
 m_tib_final_class.put('\u0f7e', 'ṃ');
 m_tib_final_class.put('\u0f82', 'ṃ');
 m_tib_final_class.put('\u0f83', 'ḿ');
-m_tib_final_class.put('\u0f39', '^');
+m_tib_final_class.put('\u0f39', '༹');
 m_tib_final_class.put('\u0f7f', 'ḥ');
 m_tib_final_class.put('\u0f84', '྄');
 
