@@ -676,13 +676,13 @@ m_tib_vowel.put('\u0f7a', 'e');
 m_tib_vowel.put('\u0f7b', 'ai');
 m_tib_vowel.put('\u0f7c', 'o');
 m_tib_vowel.put('\u0f7d', 'au');
-m_tib_vowel.put('\u0f80', '-i');
+m_tib_vowel.put('\u0f80', 'î');
 
 // long (Skt) vowels
 var m_tib_vowel_long = new newHashMap();
 m_tib_vowel_long.put('i', 'ī');
 m_tib_vowel_long.put('u', 'ū');
-m_tib_vowel_long.put('-i', '-I');
+m_tib_vowel_long.put('î', 'î');
 
 // final symbols => wylie
 var m_tib_final_wylie = new newHashMap();
@@ -690,7 +690,7 @@ m_tib_final_wylie.put('\u0f7e', 'ṃ');
 m_tib_final_wylie.put('\u0f82', 'ṁ');
 m_tib_final_wylie.put('\u0f83', 'ḿ');
 m_tib_final_wylie.put('\u0f39', '^');
-m_tib_final_wylie.put('\u0f7f', 'H');
+m_tib_final_wylie.put('\u0f7f', 'ḥ');
 m_tib_final_wylie.put('\u0f84', '྄');
 
 // final symbols by class
@@ -699,7 +699,7 @@ m_tib_final_class.put('\u0f7e', 'ṃ');
 m_tib_final_class.put('\u0f82', 'ṃ');
 m_tib_final_class.put('\u0f83', 'ḿ');
 m_tib_final_class.put('\u0f39', '^');
-m_tib_final_class.put('\u0f7f', 'H');
+m_tib_final_class.put('\u0f7f', 'ḥ');
 m_tib_final_class.put('\u0f84', '྄');
 
 // special characters introduced by ^
