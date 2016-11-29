@@ -108,8 +108,6 @@ m_consonant.put('kṣ', '\u0f69');
 m_consonant.put('Y', '\u0f61');
 m_consonant.put('r', '\u0f6a');
 m_consonant.put('ṛa', '\u0f6c');
-m_consonant.put('f', '\u0f55\u0f39');
-m_consonant.put('v', '\u0f56\u0f39');
 
 // subjoined letters
 var m_subjoined = new newHashMap();
