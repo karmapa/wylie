@@ -107,7 +107,7 @@ m_consonant.put('h', '\u0f67');
 m_consonant.put('kṣ', '\u0f69');
 m_consonant.put('Y', '\u0f61');
 m_consonant.put('r', '\u0f6a');
-m_consonant.put('ṛa', '\u0f6c');
+m_consonant.put('ṛ', '\u0f6c');
 
 // subjoined letters
 var m_subjoined = new newHashMap();
@@ -233,7 +233,7 @@ m_other.put('oṃ', '\u0f00');
 m_other.put('ȳ', '\u0f01');
 m_other.put('uṃ', '\u0f02');
 m_other.put('uɱ', '\u0f03');
-m_other.put('ḵa', '\u0f6b');
+m_other.put('ḵ', '\u0f6b');
 m_other.put('`', '\u0f85');
 
 // special characters: flag those if they occur out of context
@@ -610,7 +610,7 @@ m_tib_top.put('\u0f67', 'h');
 m_tib_top.put('\u0f68', 'a');
 m_tib_top.put('\u0f69', 'kṣ');
 m_tib_top.put('\u0f6a', 'r');
-m_tib_top.put('\u0f6c', 'ṛa');
+m_tib_top.put('\u0f6c', 'ṛ');
 
 // subjoined letters
 var m_tib_subjoined = new newHashMap();
@@ -734,7 +734,7 @@ m_tib_other.put('\u0f3c', '{');
 m_tib_other.put('\u0f3d', '}');
 m_tib_other.put('\u0f3e', ')');
 m_tib_other.put('\u0f3f', '(');
-m_tib_other.put('\u0f6b', 'ḵa');
+m_tib_other.put('\u0f6b', 'ḵ');
 m_tib_other.put('\u0f85', '`');
 
 // all these stacked consonant combinations don't need "+"s in them
@@ -852,14 +852,12 @@ m_tokens_start.put('-', 4);
 m_tokens_start.put('ṭ', 2);
 m_tokens_start.put('a', 2);
 m_tokens_start.put('k', 2);
-m_tokens_start.put('ḵ', 2);
 m_tokens_start.put('t', 3);
 m_tokens_start.put('s', 2);
 m_tokens_start.put('c', 2);
 m_tokens_start.put('n', 2);
 m_tokens_start.put('o', 2);
 m_tokens_start.put('p', 2);
-m_tokens_start.put('ṛ', 2);
 m_tokens_start.put('u', 2);
 m_tokens_start.put('\r', 2);
 
@@ -875,7 +873,6 @@ m_tokens.add('bh');
 m_tokens.add('dh');
 m_tokens.add('dzh');
 m_tokens.add('gh');
-m_tokens.add('ḵa');
 m_tokens.add('kṣ');
 m_tokens.add('tsh');
 m_tokens.add('~M`');
@@ -899,7 +896,6 @@ m_tokens.add('ng');
 m_tokens.add('ny');
 m_tokens.add('oṃ');
 m_tokens.add('ph');
-m_tokens.add('ṛa');
 m_tokens.add('sh');
 m_tokens.add('th');
 m_tokens.add('ts');
