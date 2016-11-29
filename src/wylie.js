@@ -106,7 +106,7 @@ m_consonant.put('s', '\u0f66');
 m_consonant.put('h', '\u0f67');
 m_consonant.put('kṣ', '\u0f69');
 m_consonant.put('Y', '\u0f61');
-m_consonant.put('R', '\u0f6a');
+m_consonant.put('r', '\u0f6a');
 m_consonant.put('ṛa', '\u0f6c');
 m_consonant.put('f', '\u0f55\u0f39');
 m_consonant.put('v', '\u0f56\u0f39');
@@ -174,7 +174,7 @@ m_subjoined.put('r', '\u0fbc');
 // vowels
 var m_vowel = new newHashMap();
 m_vowel.put('a', '\u0f68');
-m_vowel.put('A', '\u0f71');
+m_vowel.put('ā', '\u0f71');
 m_vowel.put('i', '\u0f72');
 m_vowel.put('ī', '\u0f71\u0f72');
 m_vowel.put('u', '\u0f74');
@@ -611,7 +611,7 @@ m_tib_top.put('\u0f66', 's');
 m_tib_top.put('\u0f67', 'h');
 m_tib_top.put('\u0f68', 'a');
 m_tib_top.put('\u0f69', 'kṣ');
-m_tib_top.put('\u0f6a', 'R');
+m_tib_top.put('\u0f6a', 'r');
 m_tib_top.put('\u0f6c', 'ṛa');
 
 // subjoined letters
@@ -667,7 +667,7 @@ m_tib_subjoined.put('\u0fbc', 'r');
 // easily handled by a global replace in toWylie(), b/c they turn into subjoined "r"/"l".
 
 var m_tib_vowel = new newHashMap();
-m_tib_vowel.put('\u0f71', 'A');
+m_tib_vowel.put('\u0f71', 'ā');
 m_tib_vowel.put('\u0f72', 'i');
 m_tib_vowel.put('\u0f73', 'ī');
 m_tib_vowel.put('\u0f74', 'u');
