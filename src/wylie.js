@@ -686,18 +686,18 @@ m_tib_vowel_long.put('-i', '-I');
 
 // final symbols => wylie
 var m_tib_final_wylie = new newHashMap();
-m_tib_final_wylie.put('\u0f7e', 'M');
-m_tib_final_wylie.put('\u0f82', '~M`');
-m_tib_final_wylie.put('\u0f83', '~M');
+m_tib_final_wylie.put('\u0f7e', 'ṃ');
+m_tib_final_wylie.put('\u0f82', 'ṁ');
+m_tib_final_wylie.put('\u0f83', 'ḿ');
 m_tib_final_wylie.put('\u0f39', '^');
 m_tib_final_wylie.put('\u0f7f', 'H');
 m_tib_final_wylie.put('\u0f84', '྄');
 
 // final symbols by class
 var m_tib_final_class = new newHashMap();
-m_tib_final_class.put('\u0f7e', 'M');
-m_tib_final_class.put('\u0f82', 'M');
-m_tib_final_class.put('\u0f83', 'M');
+m_tib_final_class.put('\u0f7e', 'ṃ');
+m_tib_final_class.put('\u0f82', 'ṃ');
+m_tib_final_class.put('\u0f83', 'ḿ');
 m_tib_final_class.put('\u0f39', '^');
 m_tib_final_class.put('\u0f7f', 'H');
 m_tib_final_class.put('\u0f84', '྄');
