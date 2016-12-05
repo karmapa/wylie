@@ -75,3 +75,12 @@ describe('wylie simple check', function () {
     assert.equal(correctText, text);
   });
 });
+
+describe('wylie special check', function () {
+  it('0F73 & 0F75', function () {
+    var text = 'ཤྲཱི གཱི ནཱི རཱི ཧཱུྃ རཱུ';
+    var correctText = 'shrī gī nī rī hūṁ rū';
+    text = toWylie(text);
+    assert.equal(correctText, text);
+  });
+});
