@@ -4,7 +4,7 @@ var assert = require('assert');
 describe('wylie simple check', function () {
   it('0F00 - 0F0A', function () {
     var text = 'ༀ༁༂༃༄༅༆༇༈༉༊';
-    var correctText = 'oṃȳuṃuɱ༄༅༆༇༈༉༊';
+    var correctText = 'oṃȳuṃuɱ༄༅༆༇/༉༊';
     text = toWylie(text);
     assert.equal(correctText, text);
   });
