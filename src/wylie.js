@@ -106,7 +106,7 @@ m_consonant.put('s', '\u0f66');
 m_consonant.put('h', '\u0f67');
 m_consonant.put('kṣ', '\u0f69');
 m_consonant.put('Y', '\u0f61');
-m_consonant.put('r', '\u0f6a');
+m_consonant.put('ṛ', '\u0f6a');
 m_consonant.put('ṛ', '\u0f6c');
 
 // subjoined letters
@@ -610,7 +610,7 @@ m_tib_top.put('\u0f66', 's');
 m_tib_top.put('\u0f67', 'h');
 m_tib_top.put('\u0f68', 'a');
 m_tib_top.put('\u0f69', 'kṣ');
-m_tib_top.put('\u0f6a', 'r');
+m_tib_top.put('\u0f6a', 'ṛ');
 m_tib_top.put('\u0f6c', 'ṛ');
 
 // subjoined letters
