@@ -2023,7 +2023,7 @@ function toWylie(str, warns, escape) {
     }
      out += ']';
   }
-  return out.replace(/\+/g, '');
+  return out.replace(/\+/g, '').replace(/_/g, ' ');
 }
 var fromWylieWithWildcard = function(wy) {
   wy = wy.replace(/\./g,'．');
