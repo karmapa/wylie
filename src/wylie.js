@@ -233,6 +233,7 @@ m_other.put('oṃ', '\u0f00');
 m_other.put('ȳ', '\u0f01');
 m_other.put('uṃ', '\u0f02');
 m_other.put('uɱ', '\u0f03');
+m_other.put('/', '\u0f08');
 m_other.put('ḵ', '\u0f6b');
 m_other.put('`', '\u0f85');
 
@@ -686,7 +687,7 @@ m_tib_vowel_long.put('î', 'î');
 var m_tib_final_wylie = new newHashMap();
 m_tib_final_wylie.put('\u0f7e', 'ṃ');
 m_tib_final_wylie.put('\u0f82', 'ṁ');
-m_tib_final_wylie.put('\u0f83', 'ḿ');
+m_tib_final_wylie.put('\u0f83', 'ṁ');
 m_tib_final_wylie.put('\u0f39', '༹');
 m_tib_final_wylie.put('\u0f7f', 'ḥ');
 m_tib_final_wylie.put('\u0f84', '྄');
@@ -712,6 +713,7 @@ m_tib_other.put('\u0f00', 'oṃ');
 m_tib_other.put('\u0f01', 'ȳ');
 m_tib_other.put('\u0f02', 'uṃ');
 m_tib_other.put('\u0f03', 'uɱ');
+m_tib_other.put('\u0f08', '/');
 m_tib_other.put('\u0f0b', ' ');
 m_tib_other.put('\u0f0c', ' ');
 m_tib_other.put('\u0f0d', '/');
@@ -1925,6 +1927,8 @@ function toWylie(str, warns, escape) {
   var line = 1;
   var units = 0;
   // globally search and replace some deprecated pre-composed Sanskrit vowels
+  str = str.replace(/\u0f71\u0f72/g, '\u0f73');
+  str = str.replace(/\u0f71\u0f74/g, '\u0f75');
   str = str.replace(/\u0f76/g, '\u0fb2\u0f80');
   str = str.replace(/\u0f77/g, '\u0fb2\u0f71\u0f80');
   str = str.replace(/\u0f78/g, '\u0fb3\u0f80');
