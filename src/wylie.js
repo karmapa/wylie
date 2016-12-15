@@ -613,6 +613,7 @@ m_tib_top.put('\u0f69', 'kṣ');
 m_tib_top.put('\u0f6a', 'ṛ');
 m_tib_top.put('\u0f6c', 'ṛ');
 m_tib_top.put('\u0f88', 'ྈ');
+m_tib_top.put('\u0f89', 'ྉ');
 
 // subjoined letters
 var m_tib_subjoined = new newHashMap();
