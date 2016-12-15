@@ -52,7 +52,7 @@ describe('wylie simple check', function () {
   });
   it('0F84 - 0F8B', function () {
     var text = '྄྅྆྇ྈྉྊྋ';
-    var correctText = '྄`྆྇ྈྉྊྋ';
+    var correctText = '྄`྆྇ྈaྉaྊྋ';
     text = toWylie(text);
     assert.equal(correctText, text);
   });
