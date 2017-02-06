@@ -2,7 +2,7 @@
   "name": "wylie",
   "version": "1.0.1",
   "description": "wylie",
-  "main": "wylie.js",
+  "main": "./src/wylie.js",
   "scripts": {
     "lint": "eslint ./src/*.js",
     "test": "mocha"
